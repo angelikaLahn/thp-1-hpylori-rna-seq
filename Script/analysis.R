@@ -534,15 +534,6 @@ top_GO_terms <- go_gene_links %>%
   slice_head(n = 5) %>%  # Select the top 5
   pull(Description)  # Extract the GO term names
 
-#--->>>>
-#filter by counts
-top_GO_terms <- go_gene_links %>%
-  group_by(Description) %>%
-  summarise(total_count = sum(Count)) %>%  # or max(Count), depending on how your df is structured
-  arrange(desc(total_count)) %>%           # sort by highest Count
-  slice_head(n = 5) %>%                    # take top 5
-  pull(Description)
-#<----
 
 # Filter the original GO results for the top 5 GO terms
 go_gene_links <- go_gene_links %>%
