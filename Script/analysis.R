@@ -558,7 +558,7 @@ go_gene_links <- go_gene_links %>%
 # To reduce the number of genes per term (example: take top 10 for each term)
 go_gene_links <- go_gene_links %>%
   group_by(Description) %>%
-  slice_head(n = 10) %>%  # Choose the top 10 genes for each term
+  slice_head(n = 15) %>%  # Choose the top 15 genes for each term
   ungroup()
 
 # Check the filtered data
