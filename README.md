@@ -23,7 +23,7 @@ The workflow includes:
 
 ## Input data
 
-* Raw count tables generated using featureCounts (Galaxy)
+* Raw count tables generated using featureCounts in Galaxy
 * Samples: WT and Mock conditions at 6 h and 24 h post infection
 * Reference genome: hg38 (Homo sapiens)
 
@@ -32,7 +32,7 @@ The workflow includes:
 ## Software and tools
 
 * R (version 4.4.1)
-* RStudio (version X.X.X)
+* RStudio (version 2023.09.1)
 * DESeq2
 * clusterProfiler
 * org.Hs.eg.db
@@ -57,9 +57,9 @@ The workflow generates the following results:
 
 * Differential expression tables (full and filtered DEGs, significant up-/downregulated saved as tsv files)
 * Annotated gene lists (Ensembl IDs, gene symbols, Entrez IDs)
-* Heatmaps of selected gene sets
+* Venn diagrams of shared and unique DEGs for each timepoint
+* Heatmaps of top 50 DEGs
 * GO enrichment plots (upregulated and downregulated genes)
-* Venn diagrams of shared and unique DEGs
 * Chord diagrams linking GO terms and genes
 
 ---
